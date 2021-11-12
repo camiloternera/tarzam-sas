@@ -21,7 +21,24 @@ SET time_zone = "+00:00";
 -- Base de datos: `tarzam`
 --
 
+CREATE DATABASE tarzam;
+USE tarzam;
+
 -- --------------------------------------------------------
+
+
+--
+-- Estructura de tabla para la tabla `usuarios`
+--
+
+
+CREATE TABLE `usuario` (
+  `id_usuario` int(5) NOT NULL COMMENT 'Id de usuario',
+  `username` varchar(50) NOT NULL COMMENT 'Nombre de usuario',
+  `password` varchar(100) NOT NULL COMMENT 'Contraseña'
+  
+  );
+
 
 --
 -- Estructura de tabla para la tabla `boleta`
@@ -87,6 +104,12 @@ CREATE TABLE `pelicula` (
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD PRIMARY KEY (`id_usuario`);
 
 --
 -- Indices de la tabla `boleta`
